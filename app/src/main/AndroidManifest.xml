@@ -28,7 +28,7 @@
             android:required="false" />
     <uses-feature
             android:name="android.hardware.bluetooth_le"
-            android:required="false" />
+            android:required="true" />
 
 
 </manifest>
