@@ -1,15 +1,14 @@
-package com.blepackage.bluetooth
+package com.blePackage.bluetooth
 
 import android.Manifest
 import android.bluetooth.BluetoothAdapter
 import android.content.Intent
 import android.content.pm.PackageManager
-import androidx.fragment.app.FragmentActivity
 import android.os.Build
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
-import com.blepackage.R
-import com.blepackage.utils.showToast
+import androidx.fragment.app.FragmentActivity
+import com.blePackage.utils.showToast
 
 class BluetoothPermissionsManager (
     private val activity: FragmentActivity,
@@ -71,7 +70,7 @@ class BluetoothPermissionsManager (
         if (allGranted) {
             onBluetoothReady()
         } else {
-            val deniedList = permissions.fillter {!it.value}.keys
+            val deniedList = permissions.filter {!it.value}.keys
             showToast("Following access is denied: ${deniedList.joinToString()}")
             // Expansion here
         }
